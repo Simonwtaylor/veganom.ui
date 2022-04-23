@@ -27,9 +27,9 @@ const Home: React.FC<IHomePageProps> = ({
           Welcome to <a href="https://nextjs.org">Veganom 🥦</a>
         </h1>
         <FlexRowContainer>
-          <RecipeCard />  
-          <RecipeCard />
-          <RecipeCard />
+          <RecipeCard title={'Recipe 1'} description={'Recipe 1'} tags={[]} />  
+          <RecipeCard title={'Recipe 2'} description={'Recipe 2'} tags={[]} />
+          <RecipeCard title={'Recipe 3'} description={'Recipe 3'} tags={[]} />
         </FlexRowContainer>
       </main>
       <footer
@@ -47,7 +47,6 @@ const Home: React.FC<IHomePageProps> = ({
 export default Home;
 
 export async function getStaticProps(context: any) {
-  console.log('CONTEXT', context);
   return {
     props: {
       data: {
