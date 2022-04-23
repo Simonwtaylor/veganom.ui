@@ -20,4 +20,12 @@ export const CardTag = styled.div`
   border-radius: 25px;
   max-width: 10%;
   text-align: center;
+  flex-grow: 1;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 45%);
+`;
+
+export const CardTagContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
 `;

@@ -19,5 +19,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   title: 'Example',
   description: 'A great recipe!',
-  tags: ['tag'],
+  tags: ['High Fibre', 'Scalable'],
 };

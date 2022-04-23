@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTag, CardTitle } from './recipe-card.styles';
+import { Card, CardTag, CardTagContainer, CardTitle } from './recipe-card.styles';
  
 export interface IRecipeCardProps {
   title: string;
@@ -16,9 +16,9 @@ const RecipeCard: React.FC<IRecipeCardProps> = ({
     <Card>
       <CardTitle>{title}</CardTitle>
       <p>{description}</p>
-      <div>
+      <CardTagContainer>
         {tags.map((tag) => <CardTag>{tag}</CardTag> )}
-      </div>
+      </CardTagContainer>
     </Card>
   );
 };
