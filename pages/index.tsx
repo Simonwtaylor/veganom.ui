@@ -1,6 +1,5 @@
-import Head from 'next/head';
-import { RecipeCard } from '../src/components';
-import { FlexRowContainer } from '../src/components/common';
+import Head from "next/head";
+import { RecipeCard, FlexRowContainer } from "../src/components";
 
 interface IHomePageProps {
   data: {
@@ -8,9 +7,7 @@ interface IHomePageProps {
   };
 }
 
-const Home: React.FC<IHomePageProps> = ({
-  data,
-}) => {
+const Home: React.FC<IHomePageProps> = ({ data }) => {
   return (
     <div>
       <Head>
@@ -21,27 +18,51 @@ const Home: React.FC<IHomePageProps> = ({
       <main>
         <h1
           style={{
-            margin: '10px 20px'
+            margin: "10px 20px",
           }}
         >
           Welcome to <a href="https://nextjs.org">Veganom 🥦</a>
         </h1>
         <FlexRowContainer>
-          <RecipeCard title={'Recipe 1'} description={'Recipe 1'} tags={[]} />  
-          <RecipeCard title={'Recipe 2'} description={'Recipe 2'} tags={[]} />
-          <RecipeCard title={'Recipe 3'} description={'Recipe 3'} tags={[]} />
+          <RecipeCard
+            icon={"🥘"}
+            title={"Cottage Pie"}
+            image={
+              "https://i.pinimg.com/564x/e2/89/13/e28913c2082801c2b2c2ef87d07597fd.jpg"
+            }
+            description={"Recipe 1"}
+            tags={["High Protein", "Scalable"]}
+          />
+          <RecipeCard
+            title={"Carbonara"}
+            image={""}
+            description={"Recipe 2"}
+            tags={["High Fibre", "Scalable"]}
+          />
+          <RecipeCard
+            title={"Vegan Lasagne"}
+            image={""}
+            description={"Recipe 3"}
+            tags={["High Fibre", "Scalable"]}
+          />
+          <RecipeCard
+            title={"Red Lentil Curry"}
+            image={""}
+            description={"Recipe 3"}
+            tags={["High Fibre", "Scalable"]}
+          />
         </FlexRowContainer>
       </main>
       <footer
         style={{
-          margin: '10px 20px',
+          margin: "10px 20px",
         }}
-        className={'footer'}
+        className={"footer"}
       >
         {data.footer}
       </footer>
     </div>
-  )
+  );
 };
 
 export default Home;
@@ -50,7 +71,7 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       data: {
-        footer: 'xyz',
+        footer: "xyz",
       },
     },
   };

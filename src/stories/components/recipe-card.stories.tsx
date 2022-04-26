@@ -13,7 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof RecipeCard>;
 
-const Template: ComponentStory<typeof RecipeCard> = (args) => <RecipeCard {...args} />;
+const Template: ComponentStory<typeof RecipeCard> = (args) => <div style={{ width: '300px' }}><RecipeCard {...args} /></div>;
 
 export const Primary = Template.bind({});
 Primary.args = {
