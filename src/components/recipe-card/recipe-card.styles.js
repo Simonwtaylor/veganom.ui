@@ -1,15 +1,17 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.div`
-  border: 1px solid black;
+  border: 1px solid #00000010;
   background-color: white;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
   flex-grow: 1;
   border-radius: 5px;
   max-width: 300px;
   &:hover {
-    box-shadow: 2px 2px 5px rgb(0 0 0 / 45%);
+    box-shadow: rgb(0 0 0 / 8%) 0 3px 10px 0;
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
   }
 `;
 

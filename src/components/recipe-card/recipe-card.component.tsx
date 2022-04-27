@@ -18,12 +18,12 @@ const RecipeCard: React.FC<IRecipeCardProps> = ({
 }) => {
   return (
     <Card>
-      <CardTitle>{icon && (icon + ' ')}{title}</CardTitle>
       {image && (
         <div style={{ width: '100%', height: '200px' }}>
           <img src={image} style={{ width: '100%', height: '100%'}} />
         </div>
       )}
+      <CardTitle>{icon && (icon + ' ')}{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
       <CardTagContainer>
         {tags.map((tag) => <CardTag>{tag}</CardTag> )}
