@@ -1,18 +1,18 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Header } from './Header';
+import { StyledHeader } from '../components/common';
 
 export default {
   title: 'Example/Header',
-  component: Header,
+  component: StyledHeader,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Header>;
+} as ComponentMeta<typeof StyledHeader>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof StyledHeader> = (args) => <StyledHeader {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {

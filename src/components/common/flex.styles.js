@@ -9,7 +9,7 @@ export const FlexRowContainer = styled.div({
   flexDirection: 'row',
   rowGap: '10px',
   columnGap: '20px',
-  margin: '10px 20px',
+  margin: '20px 0px',
 });
 
 export const FlexColumnContainer = styled.div`

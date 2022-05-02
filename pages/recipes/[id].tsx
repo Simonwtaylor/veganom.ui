@@ -1,14 +1,18 @@
 import Head from 'next/head';
+import { RECIPES_MOCK } from '../../data/recipes.data';
+import { IRecipe } from '../../src/lib';
 
 interface IRecipePageProps {
-  name: string;
+  recipe: IRecipe;
   footer: string;
 }
 
 const Recipe: React.FC<IRecipePageProps> = ({
-  name,
+  recipe,
   footer,
 }) => {
+  const { title } = recipe;
+
   return (
     <div>
       <Head>
@@ -18,7 +22,7 @@ const Recipe: React.FC<IRecipePageProps> = ({
       </Head>
       <main>
         <h1>
-          🍲 {name}
+          🍲 {title}
         </h1>
       </main>
       <footer className={'footer'}>
@@ -31,11 +35,10 @@ const Recipe: React.FC<IRecipePageProps> = ({
 export default Recipe;
 
 export async function getServerSideProps(context: any) {
-  console.log('CONTEXT', context);
   return {
     props: {
       footer: 'xyz',
-      name: 'Vegan Lasagne',
+      recipe: (context.query.id) ? RECIPES_MOCK.find(a => a.id === +context.query.id) : {},
     },
   };
 }
