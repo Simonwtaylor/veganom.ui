@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
+import { RouterEnums } from '../../lib';
 
 import StyledButton from './button.component';
 import { Header } from './header.styles';
@@ -18,7 +20,9 @@ const StyledHeader = ({ user, onLogin, onLogout, onCreateAccount }: IHeaderProps
   <Header>
       <div className="wrapper">
         <div>
-          <h1>🥦 Veganom</h1>
+          <Link href={RouterEnums.HOME}>
+            <h1>🥦 Veganom</h1>
+          </Link>
         </div>
         <div>
           {user ? (

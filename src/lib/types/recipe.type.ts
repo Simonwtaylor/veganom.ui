@@ -3,6 +3,8 @@ export interface IRecipe {
   title: string;
   description: string;
   tags: string[];
+  kcals: number;
+  costPerPortion: number;
   image?: string;
   icon?: string;
 }

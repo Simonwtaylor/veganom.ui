@@ -45,3 +45,22 @@ export const CardTagContainer = styled.div`
   flex-direction: row;
   column-gap: 5px;
 `;
+
+export const CardSection = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const CardSectionItem = styled.div`
+  flex-grow: 1;
+`;
+
+export const SectionTitle = styled.span`
+  font-size: 1rem;
+  font-weight: bold;
+`;
+
+export const SectionValue = styled.span`
+  font-size: 1rem;
+`;

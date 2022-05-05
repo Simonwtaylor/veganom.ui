@@ -22,6 +22,7 @@ export const Header = styled.header`
     margin: 6px 0 6px 10px;
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
   }
 
   button + button {
